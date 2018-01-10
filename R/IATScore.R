@@ -1,16 +1,16 @@
 #' Package to score Implicit Association Test (IAT) output
 #' @description This minimalist package developed by Daniel Storage is designed to quickly score raw data outputted from an Implicit Association Test (IAT; Greenwald, McGhee, & Schwartz, 1998). IAT scores are calculated as specified by Greenwald, Nosek, and Banaji (2003). Outputted values can be interpreted as effect sizes. Refer to the DESCRIPTION file for more detailed help information (or contact me at sabbystorage@gmail.com).
 #' @param IAT The name of the dataset to be analyzed.
-#' @param Trials The number of trials across your entire IAT. The default is set to 220, which is typical of most IATs.
+#' @param Trials The number of trials across your entire IAT. The default is set to 219, which is typical of most IATs.
 #' @param First Whether participants first sorted Congruent or Incongruent trials. The default is set to Congruent.
 #' @keywords IAT
 #' @examples
 #' IATScore(IAT)
-#' IATScore(IAT, Trials=220)
-#' IATScore(TooFastIAT, Trials=220)
-#' IATScore(BriefIAT, Trials=140)
-#' IATScore(IAT, Trials=220, First="Congruent")
-#' IATScore(IAT, Trials=220, First="Incongruent")
+#' IATScore(IAT, Trials=219)
+#' IATScore(TooFastIAT, Trials=219)
+#' IATScore(BriefIAT, Trials=139)
+#' IATScore(IAT, Trials=219, First="Congruent")
+#' IATScore(IAT, Trials=219, First="Incongruent")
 #' @export
 
 IATScore <- function(IAT, Trials, First){
@@ -21,16 +21,16 @@ colnames(IAT) <- c("Block", "Trial", "Category", "Cat_Item", "Correct", "RT")
 
 RT=Block=Correct=sd=NULL
 
-# Set default number of trials to 221, which is standard for the IAT
+# Set default number of trials to 219, which is standard for the IAT
 if(missing(Trials)){
-  Trials = 221
+  TotalIterations = 219
 } else {
-  Trials = Trials + 1
+  TotalIterations = Trials
 }
 
 # Step 1: Delete any reaction times > 10,000 ms ####
-i <- nrow(IAT) # define i counting variable for while loop
-while (i < Trials) { # define while loop for Step 1
+i <- 1 # define i counting variable for while loop
+while (i <= TotalIterations) { # define while loop for Step 1
   if (IAT$RT[i] > 10000) {IAT$RT[i] <- 0}
   i = i + 1
 }

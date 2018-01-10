@@ -9,7 +9,7 @@ IATScore(IAT, Trials, First)
 \arguments{
 \item{IAT}{The name of the dataset to be analyzed.}
 
-\item{Trials}{The number of trials across your entire IAT. The default is set to 220, which is typical of most IATs.}
+\item{Trials}{The number of trials across your entire IAT. The default is set to 219, which is typical of most IATs.}
 
 \item{First}{Whether participants first sorted Congruent or Incongruent trials. The default is set to Congruent.}
 }
@@ -18,10 +18,10 @@ This minimalist package developed by Daniel Storage is designed to quickly score
 }
 \examples{
 IATScore(IAT)
-IATScore(IAT, Trials=220)
-IATScore(TooFastIAT, Trials=220)
-IATScore(BriefIAT, Trials=140)
-IATScore(IAT, Trials=220, First="Congruent")
-IATScore(IAT, Trials=220, First="Incongruent")
+IATScore(IAT, Trials=219)
+IATScore(TooFastIAT, Trials=219)
+IATScore(BriefIAT, Trials=139)
+IATScore(IAT, Trials=219, First="Congruent")
+IATScore(IAT, Trials=219, First="Incongruent")
 }
 \keyword{IAT}
