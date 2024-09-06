@@ -4,7 +4,9 @@
 \name{BriefIAT}
 \alias{BriefIAT}
 \title{Sample Brief IAT Dataset (Abbreviated IAT)}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 140 rows and 6 columns.}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 140 rows and 6 columns.
+}
 \usage{
 data(BriefIAT)
 }

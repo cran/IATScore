@@ -1,5 +1,5 @@
 #' Package to score Implicit Association Test (IAT) output
-#' @description This minimalist package developed by Daniel Storage is designed to quickly score raw data outputted from an Implicit Association Test (IAT; Greenwald, McGhee, & Schwartz, 1998). IAT scores are calculated as specified by Greenwald, Nosek, and Banaji (2003). Outputted values can be interpreted as effect sizes. Refer to the DESCRIPTION file for more detailed help information (or contact me at sabbystorage@gmail.com).
+#' @description This minimalist package developed by Daniel Storage is designed to quickly score raw data outputted from an Implicit Association Test (IAT; Greenwald, McGhee, & Schwartz, 1998). IAT scores are calculated as specified by Greenwald, Nosek, and Banaji (2003). Outputted values can be interpreted as effect sizes. Refer to the DESCRIPTION file for more detailed help information, including regarding the required format of your data.
 #' @param IAT The name of the dataset to be analyzed.
 #' @param Trials The number of trials across your entire IAT. The default is set to 219, which is typical of most IATs.
 #' @param First Whether participants first sorted Congruent or Incongruent trials. The default is set to Congruent.
@@ -58,9 +58,13 @@ Block6correctMean <- mean(Block6correct$RT) # mean of Block 6 correct trials
 
 # Step 4: Replace incorrect trials with avg RT by block + 600 ####
 newBlock2 <- Block2correctMean + 600
+if(is.nan(newBlock2)){newBlock2<-mean(IAT2$RT[IAT2$Block==2])} # default to original block mean if no incorrect answers
 newBlock3 <- Block3correctMean + 600
+if(is.nan(newBlock3)){newBlock3<-mean(IAT2$RT[IAT2$Block==3])}
 newBlock5 <- Block5correctMean + 600
+if(is.nan(newBlock5)){newBlock5<-mean(IAT2$RT[IAT2$Block==5])}
 newBlock6 <- Block6correctMean + 600
+if(is.nan(newBlock5)){newBlock5<-mean(IAT2$RT[IAT2$Block==5])}
 
 i <- 1 # define i counting variable for while loop
 while (i < nrow(IAT2) + 1) { # create while loop for Block 2 incorrect trial replacement

@@ -4,7 +4,9 @@
 \name{IAT}
 \alias{IAT}
 \title{Sample IAT Dataset (Typical)}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 220 rows and 6 columns.}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 220 rows and 6 columns.
+}
 \usage{
 data(IAT)
 }

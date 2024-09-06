@@ -4,7 +4,9 @@
 \name{TooFastIAT}
 \alias{TooFastIAT}
 \title{Sample IAT Dataset (Participant went too fast)}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 220 rows and 6 columns.}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 220 rows and 6 columns.
+}
 \usage{
 data(TooFastIAT)
 }

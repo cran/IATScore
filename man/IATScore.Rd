@@ -14,7 +14,7 @@ IATScore(IAT, Trials, First)
 \item{First}{Whether participants first sorted Congruent or Incongruent trials. The default is set to Congruent.}
 }
 \description{
-This minimalist package developed by Daniel Storage is designed to quickly score raw data outputted from an Implicit Association Test (IAT; Greenwald, McGhee, & Schwartz, 1998). IAT scores are calculated as specified by Greenwald, Nosek, and Banaji (2003). Outputted values can be interpreted as effect sizes. Refer to the DESCRIPTION file for more detailed help information (or contact me at sabbystorage@gmail.com).
+This minimalist package developed by Daniel Storage is designed to quickly score raw data outputted from an Implicit Association Test (IAT; Greenwald, McGhee, & Schwartz, 1998). IAT scores are calculated as specified by Greenwald, Nosek, and Banaji (2003). Outputted values can be interpreted as effect sizes. Refer to the DESCRIPTION file for more detailed help information, including regarding the required format of your data.
 }
 \examples{
 IATScore(IAT)
